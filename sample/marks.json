@@ -1,0 +1,16 @@
+{
+  "budget": 1,
+  "processes": ["p1", "p2", "p3"],
+  "process_error_code": "E_NO_PROCESS",
+  "dup_error_code": "E_DUP_MARK",
+  "self_error_code": "E_SELF_MARK",
+  "event_error_code": "E_BAD_EVENT",
+  "state": { "marks": [["p1", []], ["p2", []], ["p3", []]], "done": [], "snaps": 0, "ledger": [], "applied": [] },
+  "events": [
+    { "id": 1, "kind": "mark", "from": "p1", "to": "p2" },
+    { "id": 2, "kind": "mark", "from": "p2", "to": "p1" },
+    { "id": 3, "kind": "mark", "from": "p3", "to": "p1" },
+    { "id": 4, "kind": "mark", "from": "p1", "to": "p3" },
+    { "id": 5, "kind": "mark", "from": "p3", "to": "p2" }
+  ]
+}
